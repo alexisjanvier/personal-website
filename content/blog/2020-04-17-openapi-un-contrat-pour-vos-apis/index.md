@@ -1,13 +1,10 @@
 +++
-layout: post
-title: "OpenAPI : un contrat pour vos API.s"
-excerpt: "La spécification OpenAPI permet d'écrire le contrat du service fourni par une API REST. Mais comment écrire un tel contrat et à quoi va-t-il servir ?"
-cover_image: "./images/apiContract.jpg"
-thumbnail_image: "./images/openAPI.png"
-authors:
-- alexis
-tags:
-- rest
+title="OpenAPI : un contrat pour vos API.s"
+slug="openapi-un-contrat-pour-vos-apis"
+marmelab="https://marmelab.com/blog/2020/04/17/openapi-un-contrat-pour-vos-apis.html"
+date = 2020-04-17
+description="La spécification OpenAPI permet d'écrire le contrat du service fourni par une API REST. Mais comment écrire un tel contrat et à quoi va-t-il servir ?"
+tags = ["rest"]
 +++
 
 Comme nous l'avons vu dans le post précédent ["OpenAPI dans la jungle du REST"](/blog/2020/03/26/openapi-dans-la-jungle-du-rest.html), OpenAPI n'impose en rien la structure des documents retournés par une API Rest, au contraire d'autres spécifications comme le [JSON-LD](https://json-ld.org/) ou [JSON API](https://jsonapi.org/).
@@ -261,7 +258,7 @@ Ensuite, il existe des [linters](https://fr.wikipedia.org/wiki/Lint_(logiciel)) 
 
 Si cela ne suffit pas, on peut utiliser des plugins dans son IDE (par exemple pour [Atom](https://atom.io/packages/linter-swagger) ou [VSCode](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)), voir un éditeur dédié comme [Swagger editor](https://swagger.io/tools/swagger-editor/) ou [StopLight Studio](https://stoplight.io/studio/).
 
-![StopLight Studio](images/stopLightStudio.png)
+![StopLight Studio](stopLightStudio.png)
 
 Et lorsque le contrat est rédigé, vous pourrez le tester avec un validateur, comme [swagger-cli](https://apitools.dev/swagger-cli/), [Speccy](https://speccy.io/) ou [Spectral](https://stoplight.io/open-source/spectral/).
 
@@ -323,7 +320,7 @@ routes.get('/players', getPlayerPaginatedList);
 
 Mais l'un des projets le plus aboutis et le plus connus reste certainement [API Platform](https://api-platform.com/), reposant sur Symfony et réalisé par la fine équipe des [Tilleuls](https://les-tilleuls.coop/en). Api Platform va bien au delà de l'unique contrat OpenAPI, mais offre un concentré de bonnes pratiques et de bons outils permettant de mettre en place une API.
 
-![Le logo d'API Plateform](images/api-platform.png)
+![Le logo d'API Plateform](api-platform.png)
 
 ## Que peut-on faire avec un contrat OpenAPI ?
 
@@ -333,7 +330,7 @@ Vous venez de passer un temps non négligeable à rédiger votre contrat, il pas
 
 C'est l'utilisation la plus classique et la plus connue. D'ailleur, à l'origine, la spécification OpenAPI s'appellait [Swagger](https://swagger.io/). Et si vous ne deviez tester qu'un générateur de documentation pour votre contrat, ce serait sans aucun doute celui-là : [Swagger UI](https://swagger.io/tools/swagger-ui/).
 
-![Swagger UI](images/swagger.png)
+![Swagger UI](swagger.png)
 
 Je ne suis pas loin de penser que rien que pour la qualité et l'utilité de la documentation générée par Swagger, cela justifie l'investissement en temps dans l'établissement d'une contrat OpenAPI. Pour vous en convaincre, vous pouvez aller jouer avec leur [demo](https://petstore.swagger.io/).
 
@@ -380,7 +377,7 @@ app.listen(8080);
 
 Dans la lignée de la possibilité de générer un serveur simulant l'API ou un validateur de *"endpoints"* à partir du contrat OpenAPI, on devine la possibilité de générer automatiquement les tests fonctionnels à réaliser sur une API. C'est ce que fait le projet [Dredd](https://dredd.org/en/latest/).
 
-![Dredd](images/dredd.png)
+![Dredd](dredd.png)
 
 Mais je reviendrais sur ce projet que j'ai experimenté dans la conclusion.
 
@@ -390,7 +387,7 @@ Au delà de la documentation, de la validation ou des tests, on peut finallement
 
 C'est ce que proposent des projets comme [Swagger Editor](https://editor.swagger.io/) ou [Apimatic](https://www.apimatic.io/).
 
-![Swagger Editor](images/swaggerGenerators.gif)
+![Swagger Editor](swaggerGenerators.gif)
 
 Je n'ai pas testé le code généré par ces deux projets, et je reste dubitatif sur le fait de faire reposer tellement de briques logiciel d'un projet sur un "simple" contrat OpenAPI.
 
@@ -398,7 +395,7 @@ J'ai tout de même testé un projet beaucoup moins ambitieux mais qui m'a portan
 
 Voici un petit exemple toujours basé sur l'API de Roller Derby. Le *dataProvider* généré par restful-hook s'appelle `expressFetcher` et permet d'importer un hook `useGetPlayer` qui retourne un objet `data` (dans l'exemple renommer en `player`). Cet objet `data` est typé grace à l'utilisation du contrat OpenAPI.
 
-![dataProvider généré par restful-react](images/reactHook.gif)
+![dataProvider généré par restful-react](reactHook.gif)
 
 ## Pour résumer
 
@@ -431,7 +428,7 @@ Mais cela ne répond pas à la question de l'adoption systématique d'OpenAPI lo
 
 Après l'avoir mis en place sur plusieurs projets, un gros projet client, quelques projets open-source et un *side-project*, ce qui m'est apparu comme une évidence, c'est que si l'on commence à écrire le contrat OpenAPI, il ne faut pas le faire à moitié. Pour une raison tout aussi évidente qui est que l'on risque de se retrouver avec une documentation trompeuse, ce qui est comme dirait ma fille **"le pire truc qui soit"**.
 
-![Le pire trux qui soit](images/riznouilles.jpg)
+![Le pire trux qui soit](riznouilles.jpg)
 
 Mais aussi parce que si le contrat OpenAPI n'est pas non seulement juste mais **complet**, c'est-à-dire avec toutes les routes décrites, tous les paramètres de requêtes et tous les contenus et headers HTTP de réponses documentés, avec des exemples, **une bonne partie des outils disponibles ne servent à rien** !
 

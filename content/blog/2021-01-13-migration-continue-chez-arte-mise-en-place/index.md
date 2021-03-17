@@ -1,14 +1,10 @@
 +++
-layout: post
-title: "Histoire d'une migration chez Arte, partie 2/3 : la mise en place"
-excerpt: "Comment nous avons préparé un chantier de migration continue"
-cover_image: "./images/migration-arte-2-bootstrap-cover.jpg"
-thumbnail_image: "./images/migration-arte-2-bootstrap-thumb.jpg"
-authors:
-- alexis
-tags:
-- projet
-- architecture
+title="Histoire d'une migration chez Arte, partie 2/3 : la mise en place"
+slug="migration-continue-chez-arte-mise-en-place"
+marmelab="https://marmelab.com/blog/2021/01/13/migration-continue-chez-arte-mise-en-place.html"
+date = 2021-01-13
+description="Comment nous avons préparé un chantier de migration continue"
+tags = ["architecture"]
 +++
 
 Le [premier article de cette série](https://marmelab.com/blog/2021/01/07/migration-continue-chez-arte-pourquoi.html) à propos de notre travail d'architecture sur le site [Arte.tv](https://www.arte.tv/) a montré comment le choix d’une base de données de type documentaire, initialement pertinent, nous a conduit dans des impasses fonctionnelles. Et pourquoi nous avons donc prévu une migration vers une base de données relationnelle.
@@ -27,7 +23,7 @@ Mais cela répond à la problématique d’une commutation à un instant t : on 
 
 Le processus de gestion des contenus d’Arte se fait dans le temps. Les éditeurs programment les teasers dans les zones, mais peuvent le faire à l’avance ! Une zone n’aura pas le même contenu maintenant, cet après-midi, demain, ou la semaine prochaine.
 
-![Grille télé de la semaine](./images/programtele.jpg)
+![Grille télé de la semaine](programtele.jpg)
 
 > Arte est aussi une chaine de télévision, et tout comme comme dans un Télérama, on a une programmation éditoriale des contenus numériques sur une semaine.
 
@@ -43,7 +39,7 @@ C’est une évidence, partir d’un projet vide est toujours très satisfaisant
 
 Nous sommes partis sur une stack simple et éprouvée avec un backend d’API en [Express](https://expressjs.com/) et une base de données [PostgreSQL](https://www.postgresql.org/). Cette nouvelle API a tout de suite fait l’objet d’un contrat [OpenAPI](https://marmelab.com/blog/2020/04/17/openapi-un-contrat-pour-vos-apis.html). Ce contrat nous a permis de sécuriser nos formats d’entrée et de sortie grâce au composant [express-openapi-validator](https://github.com/cdimascio/express-openapi-validator).
 
-![La nouvelle API](./images/newAPITeaser.png)
+![La nouvelle API](newAPITeaser.png)
 
 ## Importation des données
 
@@ -73,7 +69,7 @@ Pour pouvoir opérer à tout moment un rollback lors du passage vers la nouvelle
 
 L’idée est très simple : toute opération [CRUD](https://fr.wikipedia.org/wiki/CRUD) (pour create, read, update, delete) réalisée sur le nouveau système doit être répliquée sur l’ancien système.
 
-![Édition en Y](./images/derivationY.jpg)
+![Édition en Y](derivationY.jpg)
 
 Mais si le principe est simple, sa mise en pratique est plus compliquée pour deux raisons :
 
@@ -102,7 +98,7 @@ Effet de bord de l’édition en Y, nous avons dû développer une nouvelle inte
 
 Puisque nous avions une nouvelle API, nous avions besoin d’une nouvelle interface d’édition adaptée à cette nouvelle API. Mais notre stratégie de migration continue et de son édition en Y nous a obligés à refaire cette nouvelle interface identique à la première, l’édition sur l’API métier étant limitante. Nous ne pouvions par exemple pas mettre en place une interface permettant de programmer un même teaser sur plusieurs zones, l’ancienne API ne le permettant pas. Mais aussi, afin de pouvoir rendre la migration transparente pour les éditeurs, il ne fallait pas que cette interface diffère de la première.
 
-![Interfaces ISO](./images/twinInterfaces.jpg)
+![Interfaces ISO](twinInterfaces.jpg)
 
 Cela a pourtant eu au moins un effet de bord heureux : nous pouvions réutiliser nos tests [end-to-end](https://en.wikipedia.org/wiki/End-to-end_principle) mis en place sur l’ancienne interface.
 
@@ -118,7 +114,7 @@ Vous l’aurez sûrement deviné, mais cette préparation de la migration ne s�
 
 La solution consistant à faire des branches de développement spécifiques sur un temps long est évidemment une solution à éviter. Pour résoudre ce problème de mise en production continue, même avec du code devant être inactif, il existe un pattern bien connu et éprouvé : [le feature flag](https://www.martinfowler.com/articles/feature-toggles.html).
 
-![Feature Flag](./images/featureFlag.png)
+![Feature Flag](featureFlag.png)
 
 Pour faire très simple, un feature flag est un paramètre de configuration d’un projet, qui indiquera selon sa valeur de faire quelque chose, ou pas.
 
@@ -181,7 +177,7 @@ La phase de migration proprement dite, c’est-à-dire le moment de bascule entr
 
 Si nous avons tout fait pour que cela soit transparent, le bon déroulé des différentes étapes nécessitait au minimum que les éditeurs et les responsables de l’API métier soient tenus au courant de l’avancement de cette migration.
 
-![Plan de bataille](./images/planDeBataille.jpg)
+![Plan de bataille](planDeBataille.jpg)
 
 Nous avions donc eu besoin d’un plan de migration indiquant pour chaque étape les prérequis, les manipulations à effectuer, les données à surveiller pour valider ou non l’étape, et l’impact éventuel que cela pouvait avoir sur le travail des éditeurs.
 

@@ -1,14 +1,10 @@
 +++
-layout: post
-title: "Histoire d'une migration chez Arte, partie 1/3 : le contexte"
-excerpt: "Pourquoi nous nous sommes lancés dans un chantier de migration continue"
-cover_image: "./images/migration-arte-1-context-cover.jpg"
-thumbnail_image: "./images/migration-arte-1-context-thumb.jpg"
-authors:
-- alexis
-tags:
-- projet
-- architecture
+title="Histoire d'une migration chez Arte, partie 1/3 : le contexte"
+slug="migration-continue-chez-arte-pourquoi"
+marmelab="https://marmelab.com/blog/2021/01/07/migration-continue-chez-arte-pourquoi.html"
+date = 2021-01-07
+description="Pourquoi nous nous sommes lancés dans un chantier de migration continue"
+tags = ["architecture"]
 +++
 
 Pour les besoins de l’un de nos clients, Arte, nous venons d’effectuer un gros changement d’architecture sur leur système d’information. Ce système d’édition de contenus alimente des interfaces d’administration, mais aussi les applications publiques (web, mobile, HbbTv,…) en production. Il a donc fallu rendre ce changement transparent pour tous les utilisateurs.
@@ -31,12 +27,12 @@ Mais voici très schématiquement en quoi cela a consisté.
 
 L’architecture initiale était constituée d’une grosse API métier, secondée par quelques autres APIs très spécifiques. Ces APIs étaient appelées autant de fois que nécessaire par chaque application front, une page complète pouvant par exemple nécessiter de multiples requêtes à l’API métier.
 
-![L'architecture avant le BBF](./images/designBeforeBff.png)
+![L'architecture avant le BBF](designBeforeBff.png)
 *Représentation simplifiée de l'architecture initiale*
 
 Le mise en place du BFF a permis de réduire à **un unique appel** les besoins des applications front, toute la complexité des sous-requêtes aux différentes API étant prise en charge par ce nouveau service.
 
-![L'architecture après le BBF](./images/designAfterBff.png)
+![L'architecture après le BBF](designAfterBff.png)
 
 *Représentation de l'architecture après l'ajout du BFF*
 
@@ -53,7 +49,7 @@ Cette modification d’architecture a doublement simplifié le travail des déve
 
 Avant le BFF, chaque front devait composer ses pages en réalisant les bons appels API en fonction du contenu souhaité. Selon le type d’appel réalisé, le front ne recevait pas forcément le même type d’objet. Dans le schéma suivant, on constate que l’on appelle des objets`programs`, `videos` et`collections`. Il s’agit de trois objets métiers différents. À charge pour le développeur de bien connaître tous ces objets afin de pouvoir y retrouver les informations nécessaires et pertinentes à l’affichage de la page…
 
-![Composition d’une page avant le BFF](./images/pageBeforeBff.jpg)
+![Composition d’une page avant le BFF](pageBeforeBff.jpg)
 *Les appels API avant la mise en place du BFF*
 
 Le BFF ne retourne plus maintenant qu’un seul objet `page` en un unique appel. Chaque page est découpée en`zones`. Chaque zone porte les informations décrivant l’affichage souhaité de cette zone (un seul ou plusieurs contenus affichés dans la zone, formats des images, affichage ou non des sous-titres, etc ..), mais aussi les contenus à afficher.
@@ -96,7 +92,7 @@ Et toujours dans le but de simplifier la vie des développeurs front, il n’y a
 
 C’est-à-dire qu’un teaser peut représenter un film, une émission, un concert, une série… J’insiste sur l'objet `teaser`, car il est au cœur du chantier de migration.
 
-![Composition d’une page après le BFF](./images/pageAfterBff.jpg)
+![Composition d’une page après le BFF](pageAfterBff.jpg)
 *Utilisation de l’objet page après le mise en place du BFF*
 
 Bien évidement, ces objets `page` ne sont pas statiques, et tout le travail des éditeurs d’Arte consiste à les animer quotidiennement : gestion des zones devant apparaître ou non au cours de la journée, mise en avant de certaines zones et programmations des teasers affichés dans chaque zone. Chaque support (web, applications mobiles, [HbbTV](https://fr.wikipedia.org/wiki/Hybrid_Broadcast_Broadband_TV), …) et chaque langue pouvant avoir une programmation spécifique.
@@ -104,7 +100,7 @@ Bien évidement, ces objets `page` ne sont pas statiques, et tout le travail des
 Tout ce travail d’animation des pages est réalisé grâce au CMS mis en place sur ce troisième chantier.
 
 <video width="800" controls>
-  <source src="./images/cms.mp4" type="video/mp4" />
+  <source src="cms.mp4" type="video/mp4" />
 </video>
 
 *Aperçu de l'interface du nouveau CMS*
@@ -123,7 +119,7 @@ C’était donc l’occasion de reprendre l’API métier qui, exposée pendant 
 
 Et je ne l’ai pas encore dit, mais lors des chantiers précédemment décrits, **c’est cette API métier qui avait justement endossé la responsabilité de la persistance des teasers…**
 
-![L’architecture après le CMS](./images/designAfterBffCMS.png)
+![L’architecture après le CMS](designAfterBffCMS.png)
 
 *Représentation de l’architecture avec le CMS et la base documentaire de l’API métier*
 
@@ -139,14 +135,14 @@ Cette approche document nous a amené à faire porter l’information de program
 
 En effet, pour qu’un éditeur puisse programmer un même teaser dans plusieurs zones, il fallait le dupliquer.
 
-![Duplication des teasers](./images/teasersNoSQL.png)
+![Duplication des teasers](teasersNoSQL.png)
 *Duplication des teasers due au modèle NoSQL lorsqu’un éditeur veut lier un même teaser à deux zones différentes*
 
 Régler ce problème sur la base documentaire n’était bien sûr pas impossible, mais réclamait beaucoup de code spécifique et donc de complexité, sur une brique d’API qui au contraire demandait à être simplifiée.
 
 Alors que l’utilisation d’une base relationnelle règle le problème *by design*.
 
-![Solution SQL du problème de duplication](./images/teasersSQL.png)
+![Solution SQL du problème de duplication](teasersSQL.png)
 *Solution pour programmer un teaser dans n’importe quelle zone avec une base relationnelle*
 
 Voilà donc une des très bonnes raisons nous ayant poussés à nous lancer dans un nouveau chantier : **la migration des teasers depuis l’API métier et son stockage documentaire vers une nouvelle API de gestion des teasers s’appuyant sur une base relationnelle.**

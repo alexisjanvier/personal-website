@@ -1,16 +1,10 @@
 +++
-layout: post
-title: "Handling JWT in Admin Apps the Right Way"
-excerpt: "The best practice regarding JWT storage is to use memory rather than local storage. But it comes with numerous challenges. Let's see how to tackle these in the case of a react-admin application."
-cover_image: "./images/jwt-in-memory-cover.jpg"
-thumbnail_image: "./images/jwt-in-memory-thumbnail.png"
-authors:
-- alexis
-tags:
-- react-admin
-- tutorial
-- security
-- popular
+title="Handling JWT in Admin Apps the Right Way"
+slug="handling-jwt-in-admin-apps-the-right-way"
+marmelab="https://marmelab.com/blog/2020/07/02/manage-your-jwt-react-admin-authentication-in-memory.html"
+date = 2020-07-02
+description="The best practice regarding JWT storage is to use memory rather than local storage. But it comes with numerous challenges. Let's see how to tackle these in the case of a react-admin application."
+tags = ["react-admin"]
 +++
 
 ## The Problem: Safely Storing JWT Tokens in React-Admin
@@ -209,11 +203,11 @@ Our application is already functional and secure. The JWT is no longer visible i
 
 But the user experience is not good enough. For instance, when a user reloads the page:
 
-![When reloading the page](images/raInMemoryJwtRefresh.gif)
+![When reloading the page](raInMemoryJwtRefresh.gif)
 
 Or when users disconnect from one tab while they're also connected to a second one:
 
-![Connecting two tabs](images/raInMemoryJwtTwoTabs.gif)
+![Connecting two tabs](raInMemoryJwtTwoTabs.gif)
 
 Where do these problems come from, and how can we fix them?
 
@@ -398,7 +392,7 @@ The idea is quite simple: after fetching the JWT, we call `refreshToken()`, whic
 
 It is thus the cookie's lifetime which will determine the duration of the user's session, rather than the JWT's lifetime.
 
-![Token Refresh](images/refreshToken.gif)
+![Token Refresh](refreshToken.gif)
 
 ## Persisting Sessions Across Reloads
 
@@ -426,7 +420,7 @@ To reach this result, it should be enough to make a call to the `/refresh-token`
 
 This solution works. But it's not a very satisfactory one:
 
-![Maintaining a session, first try](images/jwtSessionFirstTry.gif)
+![Maintaining a session, first try](jwtSessionFirstTry.gif)
 
 Due to its [optimistic rendering](https://medium.com/@whosale/optimistic-and-pessimistic-ui-rendering-approaches-bc49d1298cc0) system, React-admin fetches data for the current view (in our example, a list view) **before** the `checkAuth` promise returns. So, this fetch will be done without the JWT, and return a 401, leading to a redirection to the authentication page (caused by the `checkError` method of the `authProvider`). The login page will "take advantage" of the JWT finally returned and will therefore ... redirect to the original view.
 
@@ -545,7 +539,7 @@ The `waitForTokenRefresh` method will therefore be used in the `authProvider`. :
     },
 ```
 
-![Maintaining a session, second try](images/jwtSessionSecondTry.gif)
+![Maintaining a session, second try](jwtSessionSecondTry.gif)
 
 ## Logging Out Properly 
 

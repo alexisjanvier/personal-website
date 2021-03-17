@@ -1,13 +1,10 @@
 +++
-layout: post
-title: "Nettoyage de printemps de nos projets open-source"
-excerpt: "On trouve plus de 200 dépôts publics sur notre compte Github. Est-ce à dire que nous maintenons plus de 200 projets open-source ? Non, un petit nettoyage s'imposait..."
-cover_image: "./images/springCleaningLarge.jpg"
-thumbnail_image: "./images/springCleaningThumb.jpg"
-authors:
-- alexis
-tags:
-- oss
+title="Nettoyage de printemps de nos projets open-source"
+slug="nettoyage-de-printemps-sur-nos-projets-open-source"
+marmelab="https://marmelab.com/blog/2020/05/13/nettoyage-de-printemps-sur-nos-projets-open-source.html"
+date = 2020-05-13
+description="On trouve plus de 200 dépôts publics sur notre compte Github. Est-ce à dire que nous maintenons plus de 200 projets open-source ? Non, un petit nettoyage s'imposait..."
+tags = ["oss"]
 +++
 
 Marmelab est une société particulière, et ceci pour plusieurs raisons, notamment sa taille (nous ne sommes _que_ 13 développeurs à ce jour), [ses valeurs](https://marmelab.com/fr/values) ou son mode de [facturation au sprint](/blog/2013/02/11/pour-la-fin-des-contrats-au-forfait.html).
@@ -47,7 +44,7 @@ En ce mois de mai 2020, nous pouvons lister **206 projets publics** sur notre co
 
 Nous avons donc consacré une journée à recenser ces projets et isoler quelques métriques (le nombre de stars, le nombre d'issues ouvertes, la date de dernière activité, le nombre de forks ...) pour pouvoir faire collectivement le tri.
 
-![L'interface de nettoyage de printemps](images/reactSpringCleaning.png)
+![L'interface de nettoyage de printemps](reactSpringCleaning.png)
 
 Nous avons opté pour une classification en 6 grandes catégories :
 
@@ -60,17 +57,17 @@ Nous avons opté pour une classification en 6 grandes catégories :
 
 Tous les dépôt autres que **maintained** n'ayant plus à être officiellement maintenus ont été déclarés comme archivés sur Github. Pour cela, nous leur avons ajouté un cartouche indiquant clairement notre choix de ne plus les maintenir.
 
-![Les cartouches d'archivage](images/archivesStatus.png)
+![Les cartouches d'archivage](archivesStatus.png)
 
 *Le code de ces cartouches est disponible sur Github: [marmelab/foss-github-status](https://github.com/marmelab/foss-github-status)*
 
 À la fin de ce grand nettoyage, nous avions :
 
-![Nos projets classés](images/classification.png)
+![Nos projets classés](classification.png)
 
 23 projets (11%) ont donc été réellement classés comme open-source sur les 206 dépôts publics. Cela peut sembler peu, mais pour rappel, c'est presque deux fois plus que le nombre de développeurs chez Marmelab !
 
-![La liste de nos projets maintenus](images/allProjects.png)
+![La liste de nos projets maintenus](allProjects.png)
 
 *Le code nous ayant servi à faire ce nettoyage et à générer les graphiques et les listes illustrant ce post est disponible sur Github: [marmelab/foss-github-tracker](https://github.com/marmelab/foss-github-tracker)*
 
@@ -80,7 +77,7 @@ Parmi tous nos projets maintenus, un projet sort clairement du lot : [React-admi
 
 Les raisons en sont trop nombreuses pour être détaillées dans cet article : son âge (plus de 5 ans), [son nombre de contributeurs (331)](https://github.com/marmelab/react-admin/graphs/contributors), le nombre d'heures investies dessus par Marmelab (incalculables !), le nombre de [posts de blog](https://marmelab.com/fr/blog#react-admin), le nombre de [conférences](https://www.youtube.com/watch?reload=9&v=NX3puR_kERc)... Et aussi le nombre de stars sur Github : plus de 12 500 à ce jour \o/
 
-![React-admin sur Github](images/reactAdmin.png)
+![React-admin sur Github](reactAdmin.png)
 
 ## Les autres projets
 

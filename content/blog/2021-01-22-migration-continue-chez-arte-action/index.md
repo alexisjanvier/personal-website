@@ -1,14 +1,10 @@
 +++
-layout: post
-title: "Histoire d'une migration chez Arte, partie 3/3 : action"
-excerpt: "Comment nous avons mis en œuvre une migration continue"
-cover_image: "./images/migration-arte-3-action-cover.jpg"
-thumbnail_image: "./images/migration-arte-3-action-thumb.jpg"
-authors:
-- alexis
-tags:
-- projet
-- architecture
+title="Histoire d'une migration chez Arte, partie 3/3 : action"
+slug="migration-continue-chez-arte-action"
+marmelab="https://marmelab.com/blog/2021/01/22/migration-continue-chez-arte-action.html"
+date = 2021-01-22
+description="Comment nous avons mis en œuvre une migration continue"
+tags = ["architecture"]
 +++
 
 [La première partie de cet article](/blog/2021/01/07/migration-continue-chez-arte-pourquoi.html) a montré pourquoi des impasses fonctionnelles nous ont poussés à migrer d’une API reposant sur une base documentaire vers une nouvelle API s’appuyant sur une base relationnelle.
@@ -21,7 +17,7 @@ Tout est maintenant prêt pour initier la migration. Action !
 
 Cette étape a été la plus longue, car elle correspond à toute la phase de mise en place décrite dans la seconde partie.
 
-![Étape 0](./images/migrationStep0.jpg)
+![Étape 0](migrationStep0.jpg)
 
 Le feature flag `migrationStep` avec une valeur de 0 indique au système de n’afficher que l’ancienne interface d’administration et de laisser la nouvelle API complètement isolée du reste de l’infrastructure.
 
@@ -34,7 +30,7 @@ Cette étape 1 a démarré par l’importation des teasers depuis la production,
 1. L’ancienne interface d’édition des teasers est remplacée de manière transparente par la nouvelle interface branchée à la nouvelle API.
 2. La nouvelle API réplique les opérations CRUD liées aux teasers sur l’ancienne API métier.
 
-![Étape 1](./images/migrationStep1.jpg)
+![Étape 1](migrationStep1.jpg)
 
 Ce n’était pas l’étape la plus risquée, les objets teasers étant relativement simples et possédant un vrai identifiant unique sur l’API métier. Les scripts de comparaison étaient aussi très fiables, puisqu’il est assez facile de comparer l’ensemble des teasers présent sur les deux systèmes puis de s'assurer que tous les nouveaux teasers sont bien présents sur les deux API.
 
@@ -47,7 +43,7 @@ L’attribution de la valeur 2 au feature flag `migrationStep` provoque deux nou
 1. La nouvelle interface d’administration remplace intégralement l’ancienne.
 2. La nouvelle API réplique l’intégralité des opérations CRUD liées aux teasers et à leur programmation sur l’ancienne API métier.
 
-![Étape 2](./images/migrationStep2.jpg)
+![Étape 2](migrationStep2.jpg)
 
 Il s’agissait de l’étape que nous redoutions le plus, puisque nous savions que l’importation des anciennes programmations n’était pas complètement juste. D’ailleurs, cette étape a débuté par une réimportation complète de la base de l’API métier, puisque la nouvelle API n’avait jusqu’à présent pas pris en charge ces programmations.
 
@@ -63,7 +59,7 @@ Nous avons donc dû changer les règles d'importation pour remonter plus loin da
 
 L’attribution de la valeur 3 au feature flag `migrationStep` ne provoque qu’un seul changement : le BFF fait appel à la nouvelle API pour récupérer les informations sur les teasers et leur programmation.
 
-![Étape 3](./images/migrationStep3.jpg)
+![Étape 3](migrationStep3.jpg)
 
 Cette étape était techniquement simple, mais constituait tout de même le baptême du feu de la production pour la nouvelle API.
 
@@ -71,7 +67,7 @@ Cette étape était techniquement simple, mais constituait tout de même le bapt
 
 Non, pour cela nous avions utilisé sur le système de préproduction un outil qui gagne à être connu : [GoReplay](https://github.com/buger/goreplay).
 
-![GoReplay](./images/goReplay.png)
+![GoReplay](goReplay.png)
 
 En mettant le système de préproduction en étape 3 et ayant au préalable importé les données de production, GoReplay nous a permis de répliquer en direct tous les appels réalisés sur le BFF de production vers le BFF de préproduction. Ainsi, en surveillant les journaux système (les logs, via une stack [ELK](https://www.elastic.co/fr/what-is/elk-stack) et en surveillant les serveurs grâce à l'[APM](https://en.wikipedia.org/wiki/Application_performance_management) (Application Performance Management) d'Arte, nous avions validé que la nouvelle API et les requêtes sql faites à PostgreSQL supporteraient le trafic publique des applications d'Arte.
 
@@ -81,7 +77,7 @@ Si cette étape s’est déroulée sans problème, c’est aussi la seule étape
 
 Dernière valeur acceptée par le feature flag `migrationStep` : 4. Dans cette configuration, tout le code de migration en Y est désactivé. Le système se retrouve dans l’état final souhaité.
 
-![Étape 4](./images/migrationStep4.jpg)
+![Étape 4](migrationStep4.jpg)
 
 Cette phase sonnait la fin de notre chantier ! Nous pouvions alors enlever tout le code écrit pour la migration, un petit peu comme retirer l’échafaudage d’une maison lorsque sa construction se termine : supprimer l’édition en Y, retirer le feature flag des différents services, éteindre l’ancienne interface d’administration. Mais aussi permettre à l’ancienne API de s’alléger du code lié aux teasers.
 
@@ -117,7 +113,7 @@ Certes, nous ne sommes pas trois pour tout développer et maintenir, il y a une 
 
 Pas parce que nous serions des [développeurs X10](https://www.jesuisundev.com/tu-nes-pas-un-developpeur-rockstar/), loin de là ! C’est que nous trouvons que c’est une bonne taille, nous permettant de tous avoir une bonne connaissance de l’ensemble des services. C’est cela qui nous permet de toujours faire les revues de code sur l’ensemble des projets ou de pouvoir passer d’un bug sur l’application web au développement d’une nouvelle fonctionnalité sur le CMS.
 
-![Le Bus Factor](./images/bus_factor.png)
+![Le Bus Factor](bus_factor.png)
 
 Peut-être à court terme cela nous rend moins rapides. Mais dès le moyen terme, on s’aperçoit que cela évite le [facteur d'autobus](https://fr.wikipedia.org/wiki/Facteur_d'autobus) ! Et cela a été important pour mener sur 6 mois un projet qui a traversé un confinement, des journées de hackdays et des vacances d’été ! Bref, on croit en cette idée que plus l’on sera nombreux, moins l’information circulera dans son intégralité.
 

@@ -1,13 +1,10 @@
 +++
-layout: post
-title: "OpenAPI dans la jungle du REST"
-excerpt: "HATEOAS, JSON-LD, JSON API, HAL, Hydra ... La liste des acronymes de spécification liées au REST est longue. Quelle est la place d'OpenAPI dans cette liste ?"
-cover_image: "./images/apiJungleLandscape.jpg"
-thumbnail_image: "./images/apiJungleSquare.jpg"
-authors:
-- alexis
-tags:
-- rest
+title="OpenAPI dans la jungle du REST"
+slug="openapi-dans-la-jungle-du-rest"
+marmelab="https://marmelab.com/blog/2020/03/26/openapi-dans-la-jungle-du-rest.html"
+date = 2020-03-26
+description="HATEOAS, JSON-LD, JSON API, HAL, Hydra ... La liste des acronymes de spécification liées au REST est longue. Quelle est la place d'OpenAPI dans cette liste ?"
+tags = ["rest"]
 +++
 
 Depuis quelque temps, j'avoue avoir suivi de loin le monde merveilleux des spécifications liées au REST : HATEOAS, JSON-LD, JSON API, HAL, OpenAPI et autres Hydra. Si ces initiatives semblaient donner des réponses intéressantes à des problématiques induites par le flou du style d'architecture REST, le [GraphQL](https://marmelab.com/blog/2017/09/03/dive-into-graphql.html) semblait aussi y donner des bonnes réponses sous un standard unique !
@@ -127,7 +124,7 @@ Cette profusion s'explique en partie par le fait qu'une telle spécification imp
 
 En résumant ce que l'on vient de voir, on peut regrouper une bonne partie des spécifications liées aux API.s REST en deux grandes catégories : celle donnant du sens aux données (Linked-data) et celle reliant les données entre elles (Hypermedia)
 
-![Classification des acronymes](images/resumeAcronymes.png)
+![Classification des acronymes](resumeAcronymes.png)
 
 *Note: une spécification couvre les deux problématiques : la spécification [Hydra](https://www.hydra-cg.com/).*
 
