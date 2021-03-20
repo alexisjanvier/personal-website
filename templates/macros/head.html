@@ -1,0 +1,21 @@
+{% macro menu() %}
+<nav>
+    <ul>
+        <li>
+            <a href="/blog">Blog</a>
+        </li>
+        <li>
+            <a href="/talks">Talks</a>
+        </li>
+        <li>
+            <a href="/setup">Setup</a>
+        </li>
+        <li>
+            <a href="/cv">CV</a>
+        </li>
+        <li>
+            <a href="{{ get_url(path='rss.xml') }}">RSS</a>
+        </li>
+    </ul>
+</nav>
+{% endmacro menu %}

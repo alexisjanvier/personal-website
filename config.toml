@@ -1,5 +1,6 @@
 # The URL the site will be built for
 base_url = "https://alexisjanvier.net"
+title = "alexisjanvier.net"
 # theme = ""
 default_language = "fr"
 
