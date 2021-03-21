@@ -100,8 +100,27 @@ main {
 	img {
 		display: block;
 		margin: 1rem auto;
-	  }
+	}
+	section.post-item {
+		width: 85%;
+		margin: 2.5rem auto;
+		h2 {
+			margin: 0;
+			padding: 0;
+		}
+		p.post-date {
+			margin: 0;
+			padding: 0;
+			font-style: italic;
+			font-size: 0.9rem;
+		}
+		p.post-description {
+			margin: 0.5rem 0;
+			padding: 0;
+		}
+	}
 }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

@@ -10,10 +10,15 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
-<ol>
+
   {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  <section class="post-item">
+  <h2>{{ page.title }}</h2>
+  <p class="post-date">Publié le {{ page.date }}</p>
+  <p class="post-description">{{ page.description }}</p>
+  <a class="post-link" href="{{ page.permalink | safe }}">-> Lire l'article</a>
+  </section>
   {% endfor %}
-</ol>
+
 </article>
 {% endblock content %}
