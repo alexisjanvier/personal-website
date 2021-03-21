@@ -5,7 +5,7 @@ title = "alexisjanvier.net"
 default_language = "fr"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = false
+compile_sass = true
 
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -13,6 +13,15 @@ highlight_code = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+
+# Whether to generate a RSS feed automatically
+generate_feed = true
+feed_filename = "rss.xml"
+
+# Built in taxonomies of zerm. 
+taxonomies = [
+           {name = "tags"},
+]
 
 [extra]
 # Put all your custom variables here

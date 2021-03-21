@@ -1,0 +1,132 @@
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	display: block;
+	margin: 1rem auto;
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+header {
+	display: flex;
+    flex-direction: column;
+	margin: 0em auto;
+	padding: 0 1em;
+    border-bottom: 2px solid #000;
+	section {
+		display: flex;
+		justify-content: space-between;
+		.site-title {
+			font-style: italic;
+			padding-top: 1rem;
+			line-height: 1.2rem;
+			a {
+				font-style: normal;
+				font-size: 2.3rem;
+				font-weight: 700;
+				text-decoration: none;
+				color: #000;
+				margin: 0;
+				padding:0;
+				&::visited, &::hover, &::focus, &::active {
+					color:#000;
+				}
+			}
+		};
+		.search-box {
+			display: none;
+			input {
+				margin: 2rem 2rem 0 0;
+			}
+		}
+	}
+    nav {
+        width: 100%;
+		ul{
+			list-style-type: none;
+			display: flex;
+			justify-content: flex-start;
+			margin-left: 0;
+			padding-left: 0;
+			li a{
+				margin: 0 1rem;
+			}
+			li.menu{
+				&::after {
+					content: " | ";
+				}
+			}
+		}
+    }
+}
+
+/*--------------------------------------------------------------
+## Main
+--------------------------------------------------------------*/
+main {
+	h1 {
+		font-size: 2rem;
+		margin: 2rem 2.2rem;
+	}
+	h2 {
+		font-size: 1.6rem;
+		margin: 1.6em 2.4rem ;
+	}
+	h3 {
+		font-size: 1.4rem;
+		margin: 2.6rem;
+	}
+	h4 {
+		font-size: 1.2rem;
+		margin: 1.2rem 1.8rem;
+	}
+	h5 {
+		font-size: 1.1rem;
+		margin: 1.1rem 3rem;
+	}
+	p {
+		margin: 2rem;
+	}
+	img {
+		display: block;
+		margin: 1rem auto;
+	  }
+}
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+footer {
+	max-width: 69em;
+	margin: 3em auto;
+	text-align: center;
+	padding: 0 1em;
+	font-size: .75em;
+	a {
+		text-decoration: none;
+	}
+}
+
+/*--------------------------------------------------------------
+## Global
+--------------------------------------------------------------*/
+svg.icon {
+    width: 23px;
+    position: relative;
+    height: 23px;
+    top: 5px;
+}
+
+.gravatar {
+	border-radius: 50%;
+	display:inline-block;
+}
