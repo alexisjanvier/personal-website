@@ -5,10 +5,20 @@
 <meta name="description" content="{{ page.description }}">
 {%- endblock meta -%}
 
+{%- block canonical -%}
+{%- if page.extra.marmelab is defined -%}
+<link rel=”canonical” href=”{{ page.extra.marmelab }}” />
+{%- endif -%} 
+{%- endblock canonical -%}
+
 {% block content %}
-<h1 class="title">
-  {{ page.title }}
-</h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
+<article>
+  <h1 class="title">
+    {{ page.title }}
+  </h1>
+  <p class="date">
+    Publié le {{ page.date }} {%- if page.extra.marmelab is defined -%} à l'origine sur <a href="{{ page.extra.marmelab }}">marmelab.com</a>{%- endif -%}
+  </p>
+  {{ page.content | safe }}
+</article>
 {% endblock content %}
