@@ -12,12 +12,12 @@
 {%- endblock canonical -%}
 
 {% block content %}
-<article>
-  <h1 class="title">
+<article class="blog">
+  <h1>
     {{ page.title }}
   </h1>
   <p class="date">
-    Publié le {{ page.date }} {%- if page.extra.marmelab is defined -%} à l'origine sur <a href="{{ page.extra.marmelab }}">marmelab.com</a>{%- endif -%}
+    Publié le {{ page.date }}{%- if page.extra.marmelab is defined -%},&nbsp;à l'origine sur <a href="{{ page.extra.marmelab }}">marmelab.com</a>{%- endif -%}
   </p>
   {{ page.content | safe }}
 </article>
