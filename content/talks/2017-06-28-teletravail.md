@@ -4,6 +4,5 @@ date = 2017-06-28
 description="ParisJs"
 +++
 
-https://parisjs.org/meetup/2017-06-28/
-https://www.meetup.com/fr-FR/Paris-js/events/240727662/
-http://slides.com/alexisjanvier-1/full-remote
+Retour d'experience sur une première année en télétravail au [Paris.JS](https://parisjs.org/meetup/2017-06-28/).    
+[Voir les slides](http://slides.com/alexisjanvier-1/full-remote)

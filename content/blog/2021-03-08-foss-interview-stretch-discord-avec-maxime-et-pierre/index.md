@@ -20,4 +20,4 @@ Pour cette seconde vidéo, nous acceuillons [Maxime](https://twitter.com/rmaxime
 
 - [le projet sur Github](https://github.com/marmelab/stretch-discord)
 - [l'article de blog cité dans la vidéo](https://marmelab.com/blog/2020/12/09/stretching-as-a-developer.html)
-- [Gremelins, l'autre projet maintenu par Maxime et Pierre](https://github.com/marmelab/gremlins.js)
+- [Gremlins, l'autre projet maintenu par Maxime et Pierre](https://github.com/marmelab/gremlins.js)

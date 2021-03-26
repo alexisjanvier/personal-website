@@ -4,7 +4,5 @@ date = 2019-06-20
 description="RennesJS"
 +++
 
-https://rennesjs.org/#talks
-https://www.meetup.com/fr-FR/RennesJS/events/262371604/
-https://github.com/marmelab/os-project-in-your-company
-http://slides.com/alexisjanvier-1/os-project-in-your-company
+Réflexions sur l'open-source au [Rennes.JS](https://www.meetup.com/fr-FR/RennesJS/events/262371604/).    
+[Voir les slides](http://slides.com/alexisjanvier-1/os-project-in-your-company)
