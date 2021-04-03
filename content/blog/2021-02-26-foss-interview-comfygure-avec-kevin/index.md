@@ -1,10 +1,15 @@
 +++
 title="FOSS interview : comfygure avec Kevin"
 slug="foss-interview-comfygure-avec-kevin"
-marmelab="https://marmelab.com/blog/2021/02/26/foss-interview-comfygure-avec-kevin.html"
 date = 2021-02-26
 description="Dans cette vidéo, Kevin nous parle du projet open-source comfygure"
-tags = ["oss"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["foss"]
+[extra]
+marmelab="https://marmelab.com/blog/2021/02/26/foss-interview-comfygure-avec-kevin.html"
 +++
 
 Les mainteneurs de projets open source sont sûrement les mieux placés pour en parler. Dans cette série d’interviews vidéos, des développeurs viennent présenter un projet sous licence libre créé et maintenu chez Marmelab. C'est aussi l'occasion d'échanger avec eux sur leur rapport au monde du logiciel libre.

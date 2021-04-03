@@ -1,10 +1,15 @@
 +++
 title="Managing State in React: Redux or not Redux?"
 slug="managing-state-in-react-redux-or-not-redux"
-marmelab="https://marmelab.com/blog/2018/06/27/redux-or-not-redux.html"
 date = 2018-06-27
 description="Redux is a fantastic tool for managing state in React.js, but is it suitable for all situations? Probably not."
-tags = ["react"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["javascript"]
+[extra]
+marmelab="https://marmelab.com/blog/2018/06/27/redux-or-not-redux.html"
 +++
 
 At Marmelab we really like to manage the state of React apps using [Redux](https://redux.js.org/). Its emergence has transformed the way we code our applications: immutability, functional programming, asynchronous API call management with Redux-Saga generators... So much that we sometimes tend to "de facto" integrate Redux into our project start stack.  

@@ -1,10 +1,15 @@
 +++
 title="Histoire d'une migration chez Arte, partie 3/3 : action"
 slug="migration-continue-chez-arte-action"
-marmelab="https://marmelab.com/blog/2021/01/22/migration-continue-chez-arte-action.html"
 date = 2021-01-22
 description="Comment nous avons mis en œuvre une migration continue"
-tags = ["architecture"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["architecture", "projet"]
+[extra]
+marmelab="https://marmelab.com/blog/2021/01/22/migration-continue-chez-arte-action.html"
 +++
 
 [La première partie de cet article](/blog/2021/01/07/migration-continue-chez-arte-pourquoi.html) a montré pourquoi des impasses fonctionnelles nous ont poussés à migrer d’une API reposant sur une base documentaire vers une nouvelle API s’appuyant sur une base relationnelle.

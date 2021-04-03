@@ -1,10 +1,15 @@
 +++
 title="A Developer's Diary: Building A Notes Taking App in Shell"
 slug="a-developers-diary-building-a-notes-taking-app-in-shell"
-marmelab="https://marmelab.com/blog/2018/11/08/a-developers-diary.html"
 date = 2018-11-08
 description="I'm used to recording all the little things I learn from day to day as a developer. Since I didn't find the right note-taking tool to integrate in my daily routine, I coded it. Read on to see what I learned in the process."
-tags = ["shell"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["console"]
+[extra]
+marmelab="https://marmelab.com/blog/2018/11/08/a-developers-diary.html"
 +++
 
 Something I really like about being a developer is that you learn all the time: a pattern, a lib, an obscure configuration trick... In the heat of the action, you're glad, but a few days later, you often forget. It is at these time that you think it would have been a good idea to take notes.

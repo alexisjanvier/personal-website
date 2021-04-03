@@ -1,10 +1,15 @@
 +++
 title="Retour sur une année en télétravail à plein temps"
 slug="retour-sur-une-annee-en-teletravail-a-plein-temps"
-marmelab="https://marmelab.com/blog/2017/09/27/full-time-remote-job.html"
 date = 2017-09-27
 description="On trouve beaucoup d’articles de blog sur le « full time remote jobs », moins sur le télétravail à plein temps. Si les entreprises en France s’ouvrent petit à petit, journée par journée au télétravail, le travail à plein temps à distance est moins courant. Pourtant c’est possible et c’est efficace."
-tags = ["teletravail"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["soft-skill"]
+[extra]
+marmelab="https://marmelab.com/blog/2017/09/27/full-time-remote-job.html"
 +++
 
 

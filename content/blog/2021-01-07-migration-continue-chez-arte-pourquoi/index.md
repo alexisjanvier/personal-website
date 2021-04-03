@@ -1,10 +1,15 @@
 +++
 title="Histoire d'une migration chez Arte, partie 1/3 : le contexte"
 slug="migration-continue-chez-arte-pourquoi"
-marmelab="https://marmelab.com/blog/2021/01/07/migration-continue-chez-arte-pourquoi.html"
 date = 2021-01-07
 description="Pourquoi nous nous sommes lancés dans un chantier de migration continue"
-tags = ["architecture"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["architecture", "projet"]
+[extra]
+marmelab="https://marmelab.com/blog/2021/01/07/migration-continue-chez-arte-pourquoi.html"
 +++
 
 Pour les besoins de l’un de nos clients, Arte, nous venons d’effectuer un gros changement d’architecture sur leur système d’information. Ce système d’édition de contenus alimente des interfaces d’administration, mais aussi les applications publiques (web, mobile, HbbTv,…) en production. Il a donc fallu rendre ce changement transparent pour tous les utilisateurs.

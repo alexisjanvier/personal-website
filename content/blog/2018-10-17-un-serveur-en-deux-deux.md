@@ -3,7 +3,12 @@ title="Un serveur en deux deux"
 slug="un-serveur-en-deux-deux"
 date = 2018-10-18
 description="Comment lancer un projet docker-compose sur un serveur publique en moins de 10 minutes"
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
 tags = ["devops"]
+[extra]
 +++
 
 Pour un projet, il a fallu lancer rapidement un serveur de staging (agilité oblige) en attendant la mise à disposition du serveur de staging final. Sans être aussi rapide qu'avec un service comme [Zeit Now](https://zeit.co/now) ou l'utilisation d'un [ngrock](https://ngrok.com/), il est possible sur AWS lancer un serveur fonctionnel en moins de 10 minutes.

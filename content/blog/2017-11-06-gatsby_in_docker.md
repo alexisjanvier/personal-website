@@ -3,7 +3,12 @@ title="Développer un site Gasby.js avec Docker"
 slug="gasby-avec-docker"
 date = 2017-11-06
 description="En ce moment, j'utilise Gasby pour plusieurs sites (ce blog compris). Mais tous les contributeurs de ces sites ne veulent pas forcément installer Node sur leur machine. La solution évidente : Docker."
-tags = ["Gatsby"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["javascript", "devops"]
+[extra]
 +++
 
 Gatsby est un système de génération de site statique basé sur Node. En mode développement, il s'appuie sur le `webpack dev server` afin de se mettre à jours automatiquement.

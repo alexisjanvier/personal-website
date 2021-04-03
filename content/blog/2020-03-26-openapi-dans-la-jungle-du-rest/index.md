@@ -1,10 +1,15 @@
 +++
 title="OpenAPI dans la jungle du REST"
 slug="openapi-dans-la-jungle-du-rest"
-marmelab="https://marmelab.com/blog/2020/03/26/openapi-dans-la-jungle-du-rest.html"
 date = 2020-03-26
 description="HATEOAS, JSON-LD, JSON API, HAL, Hydra ... La liste des acronymes de spécification liées au REST est longue. Quelle est la place d'OpenAPI dans cette liste ?"
-tags = ["rest"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["api"]
+[extra]
+marmelab="https://marmelab.com/blog/2020/03/26/openapi-dans-la-jungle-du-rest.html"
 +++
 
 Depuis quelque temps, j'avoue avoir suivi de loin le monde merveilleux des spécifications liées au REST : HATEOAS, JSON-LD, JSON API, HAL, OpenAPI et autres Hydra. Si ces initiatives semblaient donner des réponses intéressantes à des problématiques induites par le flou du style d'architecture REST, le [GraphQL](https://marmelab.com/blog/2017/09/03/dive-into-graphql.html) semblait aussi y donner des bonnes réponses sous un standard unique !

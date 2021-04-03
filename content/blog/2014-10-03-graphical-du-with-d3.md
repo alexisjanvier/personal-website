@@ -1,10 +1,15 @@
 +++
 title="Une console plus graphique avec node.js et d3.js"
 slug="une-console-plus-graphique-avec-nodejs-et-d3js"
-marmelab="https://marmelab.com/blog/2014/10/03/graphical-du-with-d3.html"
 date = 2014-10-03
 description="\"Afficher graphiquement l'occupation disque d'un répertoire dans la console en Javascript\" : l'énoncé du problème est très motivant. Mais après 5 jours à en tenter l'implémentation, peut-on dire que node.js et d3.js sont utilisables pour des rendus graphiques dans un terminal ? Oui. Mais ..."
-tags = ["dataviz", "d3-js", "node-js", "tutorial"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["dataviz", "console"]
+[extra]
+marmelab="https://marmelab.com/blog/2014/10/03/graphical-du-with-d3.html"
 +++
 
 <img src="/images/blog/treedu1.png" class="medium" >

@@ -3,7 +3,12 @@ title="Applications 12 facteurs: comment validez-vous votre configuration ?"
 slug="applications-12-facteurs-comment-validez-vous-votre-configuration"
 date = 2018-12-02
 description="Dès lors que nous livrons notre code sous forme d’image docker, comment s’assurer que la configuration de l’environnement d’exécution sera correcte ?"
-tags = ["twelve-factor"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["devops"]
+[extra]
 +++
 
 L’arrivée de Docker a fortement impacté l’architecture de nos applications. Si nous l’avons au début surtout utilisé pour faciliter le développement local, il n’est maintenant pas rare que Docker soit également utilisé en production, et que nous délivrions nos applications sous forme d’images d’un ou plusieurs services. Ce type de conception apporte beaucoup de souplesse en termes de développement, mais aussi son lot de complexité. [La méthodologie 12 facteurs](https://12factor.net/fr/) est une référence fiable en ce qui concerne les bonnes pratiques d’applications constituées en services. 

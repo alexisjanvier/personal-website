@@ -1,10 +1,15 @@
 +++
 title="OpenAPI : un contrat pour vos API.s"
 slug="openapi-un-contrat-pour-vos-apis"
-marmelab="https://marmelab.com/blog/2020/04/17/openapi-un-contrat-pour-vos-apis.html"
 date = 2020-04-17
 description="La spécification OpenAPI permet d'écrire le contrat du service fourni par une API REST. Mais comment écrire un tel contrat et à quoi va-t-il servir ?"
-tags = ["rest"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["api"]
+[extra]
+marmelab="https://marmelab.com/blog/2020/04/17/openapi-un-contrat-pour-vos-apis.html"
 +++
 
 Comme nous l'avons vu dans le post précédent ["OpenAPI dans la jungle du REST"](/blog/2020/03/26/openapi-dans-la-jungle-du-rest.html), OpenAPI n'impose en rien la structure des documents retournés par une API Rest, au contraire d'autres spécifications comme le [JSON-LD](https://json-ld.org/) ou [JSON API](https://jsonapi.org/).

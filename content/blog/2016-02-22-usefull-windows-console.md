@@ -1,10 +1,15 @@
 +++
 title="Is it snobbery to want a real console on Windows?"
 slug="is-it-snobbery-to-want-a-real-console-on-windows"
-marmelab="https://marmelab.com/blog/2016/02/22/a-usefull-windows-console.html"
 date = 2016-02-22
 description="Sometimes you have to code on Windows: this can be because of a personal challenge, or because you lost a bet, or because you don't have a choice. And it can be a bit painful when you are used to a powerful terminal. But some good solutions exist, as we'll see."
-tags = ["tutorial"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["console"]
+[extra]
+marmelab="https://marmelab.com/blog/2016/02/22/a-usefull-windows-console.html"
 +++
 
 I had to code on Windows because a client’s development environment could not be anything other than Windows 7 running in a VM (with admin’s rights, luckily), behind a non-cooperative firewall. The job consisted of a PHP Silex backend and a JavaScript frontend.

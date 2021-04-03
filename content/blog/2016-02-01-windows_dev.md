@@ -2,8 +2,13 @@
 title="Est-ce du snobisme que de vouloir une vraie console sous Windows ?"
 slug="une_console_sous_windows"
 date = 2016-02-01
-tags = ["daily tools"]
 description="Il arrive parfois que l’on doive coder sous Windows : que ce soit par challenge, parce que l’on a perdu un pari ou parce qu’on n’a pas le choix. Et cela peut être un peu douloureux lorsque l’on est habitué à sa console Mac ou Linux."
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["console"]
+[extra]
 +++
 
 Dans mon cas, c’est parce que l’environnement de travail du client ne pouvait être autre chose qu’un Windows 7 sur un VM (avec des droits d’administrateur tout de même), le tout derrière un firewall peu conciliant. La mission prévoyait un back en PHP 5.6 avec du Silex, et un peu de JavaScript sur la partie front.

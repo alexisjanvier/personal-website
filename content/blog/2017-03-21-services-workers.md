@@ -1,10 +1,15 @@
 +++
 title="Découvrir les service workers"
 slug="decouvrir-les-service-workers"
-marmelab="https://marmelab.com/blog/2017/03/21/decouvrir-les-service-workers.html"
 date = 2017-03-21
 description="Un outil de plus dans la panoplie des développeurs web ? Les services workers offrent bien plus que la simple possibilité de rendre une application disponible hors-ligne. Voyons ça en pratique."
-tags = ["js"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["javascript"]
+[extra]
+marmelab="https://marmelab.com/blog/2017/03/21/decouvrir-les-service-workers.html"
 +++
 
 <img class="responsive" src="/images/blog/serviceworkers/simple_schema-edited.jpg" alt="Image sourced by Google and modified by author." />

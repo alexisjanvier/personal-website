@@ -3,7 +3,12 @@ title="Bouchonner une API avec Polly.js"
 slug="bouchonner-une-api-avec-pollyjs"
 date = 2019-10-09
 description="Ce n'est jamais simple de mettre en place des tests fonctionnels impliquant une base de données ou des appels à une API externe. Si Polly.js ne résout pas le problème de la base de données, c'est un outil utile à connaitre pour bouchonner des appels vers une API."
-tags = ["javascript"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["api", "test"]
+[extra]
 +++
 
 Une solution simple à mettre en place lors de la création de tests fonctionnels sur une API dépendant elle-même d'appels à une autre API consiste à créer des fixtures. Il suffit alors de mettre en place un mock du client à cette API, mock qui se chargera de renvoyer des fixtures. Un petit exemple avec [Jest](https://jestjs.io/), [supertest](https://github.com/visionmedia/supertest) et un client d'API basé sur [axios](https://github.com/axios/axios):

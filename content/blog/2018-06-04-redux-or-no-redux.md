@@ -3,7 +3,12 @@ title="Avec ou sans Redux ?"
 slug="avec-ou-sans-redux"
 date = 2018-06-04
 description="Redux est un outil fantastique, mais convient-t-il à toutes les situations ? Sans doute pas."
-tags = ["react"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["javascript"]
+[extra]
 +++
 
 Chez Marmelab on aime beaucoup [Redux](https://redux.js.org/). Il faut dire que son arrivée a été un vrai moment d'évolution dans notre manière de penser nos applications : store immutable, sensibilisation à la programmation fonctionnelle, gestion asynchrone des call API avec les générateurs de Redux-Saga, ... À tel point que l'on a eu tendance à l'intégrer de facto dans notre stack en démarrage de projet.  

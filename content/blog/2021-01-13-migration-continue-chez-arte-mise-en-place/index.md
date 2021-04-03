@@ -1,10 +1,15 @@
 +++
 title="Histoire d'une migration chez Arte, partie 2/3 : la mise en place"
 slug="migration-continue-chez-arte-mise-en-place"
-marmelab="https://marmelab.com/blog/2021/01/13/migration-continue-chez-arte-mise-en-place.html"
 date = 2021-01-13
 description="Comment nous avons préparé un chantier de migration continue"
-tags = ["architecture"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["architecture", "projet"]
+[extra]
+marmelab="https://marmelab.com/blog/2021/01/13/migration-continue-chez-arte-mise-en-place.html"
 +++
 
 Le [premier article de cette série](https://marmelab.com/blog/2021/01/07/migration-continue-chez-arte-pourquoi.html) à propos de notre travail d'architecture sur le site [Arte.tv](https://www.arte.tv/) a montré comment le choix d’une base de données de type documentaire, initialement pertinent, nous a conduit dans des impasses fonctionnelles. Et pourquoi nous avons donc prévu une migration vers une base de données relationnelle.

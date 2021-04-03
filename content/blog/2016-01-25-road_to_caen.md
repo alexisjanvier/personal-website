@@ -2,8 +2,13 @@
 title="Road to Caen"
 slug="road_to_caen_le_projet"
 date = 2016-01-25
-tags = ["Lean"]
 description="Un nouveau blog, un premier post et un titre pas très technique : je déménage cet été à Caen. "
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["projet"]
+[extra]
 +++
 
 C’est un peu une mise en pratique de la politique de [rural offshore](#rural_offshore) chère à Marmelab. Non, ce nouveau blog ne sera pas le journal de mon déménagement, mais ce projet de retour en province me semble un moment propice pour améliorer ma compétence en communication.

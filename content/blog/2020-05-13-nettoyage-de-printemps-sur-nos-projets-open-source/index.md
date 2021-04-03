@@ -1,10 +1,15 @@
 +++
 title="Nettoyage de printemps de nos projets open-source"
 slug="nettoyage-de-printemps-sur-nos-projets-open-source"
-marmelab="https://marmelab.com/blog/2020/05/13/nettoyage-de-printemps-sur-nos-projets-open-source.html"
 date = 2020-05-13
 description="On trouve plus de 200 dépôts publics sur notre compte Github. Est-ce à dire que nous maintenons plus de 200 projets open-source ? Non, un petit nettoyage s'imposait..."
-tags = ["oss"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["foss"]
+[extra]
+marmelab="https://marmelab.com/blog/2020/05/13/nettoyage-de-printemps-sur-nos-projets-open-source.html"
 +++
 
 Marmelab est une société particulière, et ceci pour plusieurs raisons, notamment sa taille (nous ne sommes _que_ 13 développeurs à ce jour), [ses valeurs](https://marmelab.com/fr/values) ou son mode de [facturation au sprint](/blog/2013/02/11/pour-la-fin-des-contrats-au-forfait.html).

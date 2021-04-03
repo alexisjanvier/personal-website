@@ -3,7 +3,12 @@ title="Happy Node.js 11.0.0 Day"
 slug="happy-nodejs-1100-day"
 date = 2018-10-26
 description="C'est cette semaine qu'est sortie la version 11 de Node.js. L'occasion de faire un petit ménage dans mes modules npm installés en global."
-tags = ["node-js"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["javascript"]
+[extra]
 +++
 
 Le premier tweet vu de ma journée était un retweet de @jeromemacias

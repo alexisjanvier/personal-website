@@ -2,8 +2,13 @@
 title="Associer un utilisateur à celui d'un container Docker"
 slug="bind-user-on-docker-container"
 date = 2017-09-22
-tags = ["docker"]
 description="L'un des problèmes très classiques lorsque l'on utilise Docker, c'est que l'utilisateur d'un container est root par défaut. Du coup, on peut rencontrer des problèmes de droits sur les répertoires générés au sein de ce container."
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["devops"]
+[extra]
 +++
 
 L'un des problèmes très classiques lorsque l'on utilise Docker, c'est que l'utilisateur d'un container est `root` par défaut. Du coup, on peut rencontrer des problèmes de droits sur les répertoires générés au sein de ce container.

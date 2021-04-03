@@ -3,7 +3,12 @@ title="Les cartes techniques"
 slug="les-cartes-techniques"
 date = 2019-03-31
 description="Si l'on se limite aux histoires utilisateur pour remplir le backlog produit, ne passe-t-on pas à côté de la plaque ?"
-tags = ["Agile"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["projet"]
+[extra]
 +++
 
 Dans son billet [« Les histoires d’utilisateurs sont surestimées »](https://marmelab.com/blog/2019/01/31/user-stories-are-overrated.html), Florian soulève le problème suivant : certains agilistes ont tendance à s’enfermer dans une forme de dogmatisme. Comme le fait d’interdire l’ajout de tout ce qui ne serait pas une histoire utilisateur dans un backlog de produit.

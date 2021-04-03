@@ -3,7 +3,11 @@ title="FOSS interview : stretch-discord avec Maxime et Pierre"
 slug="foss-interview-stretch-discord-avec-maxime-et-pierre"
 date = 2021-03-08
 description="Dans cette vidéo, Maxime et Pierre nous parlent du projet open-source stretch-discord"
-tags = ["oss"]
+draft = false
+in_search_index = true
+[taxonomies]
+categories = ["informatique"]
+tags = ["foss"]
 [extra]
 marmelab="https://marmelab.com/blog/2021/03/08/foss-interview-stretch-discord-avec-maxime-et-pierre.html"
 +++
