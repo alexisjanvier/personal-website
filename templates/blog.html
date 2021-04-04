@@ -1,3 +1,4 @@
+{% import "macros/pagination.html" as p %}
 {% extends "base.html" %}
 
 {%- block meta -%}
@@ -10,15 +11,15 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
-
-  {% for page in section.pages %}
+  {{ p::paginate() }}
+  {% for page in paginator.pages %}
   <section class="post-item">
   <h2>{{ page.title }}</h2>
   <p class="post-date">Publié le {{ page.date }}</p>
   <p class="post-description">{{ page.description }}</p>
-  <a class="post-link" href="{{ page.permalink | safe }}">-> Lire l'article</a>
+  <a class="post-link" href="{{ page.permalink | safe }}">→ Lire l'article</a>
   </section>
   {% endfor %}
-
+  {{ p::paginate() }}
 </article>
 {% endblock content %}

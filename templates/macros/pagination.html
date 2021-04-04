@@ -1,0 +1,21 @@
+{% macro paginate() %}
+<div class="pagination">
+        {% if paginator.previous -%}
+        <span class="pButton">
+            <a href="{{ paginator.previous }}">
+                <span class="pIcon"><</span>
+            </a>
+        </span>
+        {# end of if-check for page.previous #}
+        {% endif -%}
+        <span class="pMiddle">Vous êtes sur la page <strong>{{ paginator.current_index }}</strong> (sur {{ paginator.number_pagers }})</span>
+        {% if paginator.next -%}
+        {# end of if-check for page.next #}
+        <span class="pButton">
+            <a href="{{ paginator.next }}">
+                <span class="pIcon">></span>
+            </a>
+        </span>
+        {% endif-%}
+</div>
+{% endmacro paginate %}

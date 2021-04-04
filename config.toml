@@ -20,8 +20,8 @@ feed_filename = "rss.xml"
 
 # Built in taxonomies of zerm. 
 taxonomies = [
-    {name = "tags"},
-    {name = "categories"},
+    {name = "tags", slug = "tags"},
+    {name = "categories", slug = "categories"},
 ]
 
 [extra]
