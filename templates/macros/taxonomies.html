@@ -37,9 +37,9 @@
 {% endmacro categories %}
 
 {% macro tags(tags) %}
-    ::
+    <ul class="tags">
     {% for tag in tags -%}
-        #<a href="{{get_taxonomy_url(kind="tags", name=tag )}}">{{ tag }}</a>
-        {# end of tags for-loop #}
+        <li><a href="{{get_taxonomy_url(kind="tags", name=tag )}}" class="tag">{{ tag }}</a></li>
     {% endfor -%}
+    </ul>
 {% endmacro tags %}
