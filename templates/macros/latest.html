@@ -1,0 +1,5 @@
+{% macro blog() %}
+{% set section = get_section(path="blog/_index.md") %}
+    <h3>Dernier post de blog</h3>
+    <p><strong>{{ section.pages[0].title }}</strong></p>
+{% endmacro blog %}
