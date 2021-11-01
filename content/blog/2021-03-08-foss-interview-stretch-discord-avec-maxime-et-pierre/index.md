@@ -18,7 +18,7 @@ Pour cette seconde vidéo, nous acceuillons [Maxime](https://twitter.com/rmaxime
 
 > « … un bot Discord comme il en existe plein qui poste des exercices d'étirements une fois toutes les heures. »
 
-<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://tube.caen.camp/videos/embed/8d71a126-4197-4b9c-b2aa-cf00cb0b0251?warningTitle=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1kG89jrbUpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Les liens
 

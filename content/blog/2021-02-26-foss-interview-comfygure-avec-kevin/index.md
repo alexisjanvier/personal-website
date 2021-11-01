@@ -18,7 +18,7 @@ Le premier à se lancer est [Kevin](https://twitter.com/kmaschta), mainteneur du
 
 > « … un gestionnaire de configurations totalement chiffré possédant un système de version inspiré de Git. »
 
-<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://tube.caen.camp/videos/embed/8a53a0fa-dd95-44a1-aa03-5710542d331b?warningTitle=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8RGzxFefEJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Les liens
 
